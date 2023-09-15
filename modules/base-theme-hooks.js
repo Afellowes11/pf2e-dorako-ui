@@ -179,7 +179,6 @@ Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
   const collapseHp = hpDetails === "" && hpTemp === 0;
   const collapseInitiative = app.object.attributes.initiative.ability === "perception";
   const collapseToggles = app.object.system.toggles?.length === 0;
-  const collapseSaves = app.object.system.attributes.allSaves.value === "";
 
   const immunities = app.object.system.attributes.immunities;
   const collapseImmunities = immunities.length === 0 && immunities.custom === "";
@@ -236,11 +235,6 @@ Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
   newSaves.appendChild(saves);
   newSaves.appendChild(saveDetails);
   initiative.parentNode.insertBefore(newSaves, initiative.nextSibling);
-
-  if (collapseSaves) {
-    let section = html.find(".saves-section")[0];
-    section.classList.add("collapsed");
-  }
 });
 
 // // Blue player sheet
