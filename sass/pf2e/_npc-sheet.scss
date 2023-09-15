@@ -145,29 +145,6 @@
         border: none;
       }
 
-      .saves-section.side-bar-section {
-        display: flex;
-        flex-direction: column;
-
-        &.collapsed {
-          max-height: 52px;
-          &:hover {
-            max-height: 1000px;
-          }
-        }
-      }
-
-      .saves {
-        margin-top: 4px;
-        width: unset;
-      }
-
-      .save-details {
-        font-size: 14px;
-      }
-    }
-  }
-
   .side-bar-section-header {
     background: var(--primary);
     border: 1px solid var(--primary);
