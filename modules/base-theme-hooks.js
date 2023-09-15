@@ -225,10 +225,6 @@ Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
     section.classList.add("collapsed", "empty");
   }
 
-  let saves = html.find(".saves")[0];
-  let saveDetails = html.find(".save-details")[0];
-  saveDetails.classList.remove("side-bar-section");
-
   let initiative = html.find(".initiative")[0];
   let newSaves = document.createElement("div");
   newSaves.classList.add("saves-section", "side-bar-section");
